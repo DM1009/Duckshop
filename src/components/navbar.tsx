@@ -18,7 +18,7 @@ export default function navbar() {
           </h1>
         </div>
       </Link>
-      <ul className='flex justify-center text-amber-900 font-extrabold font-nav text-xl lg:text-2xl'>
+      <ul className='flex justify-center text-amber-900 font-extrabold font-nav text-md lg:text-2xl'>
         <li>
           <Link href='/all'>All products</Link>
         </li>
