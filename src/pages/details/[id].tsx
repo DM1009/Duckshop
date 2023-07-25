@@ -60,7 +60,7 @@ export default function Detail(): JSX.Element {
   return (
     <Layout>
       <div className='flex justify-center'>
-        <div className={`mt-4 mx-24 flex flex-col `}>
+        <div className={`mt-4 lg:mx-24 flex flex-col `}>
           <Image
             src={product.img[selectedImg]}
             width={400}
@@ -70,7 +70,7 @@ export default function Detail(): JSX.Element {
           <div className='flex justify-center'>
             {product.img.map((img, index) => (
               <Image
-                className={`mx-2 mt-2 cursor-pointer `}
+                className={`mx-1 lg:mx-2 mt-2 cursor-pointer border-2`}
                 key={index}
                 src={img}
                 width={50}
@@ -82,14 +82,14 @@ export default function Detail(): JSX.Element {
           </div>
         </div>
 
-        <div className='mt-4 mx-24 text-left flex flex-col'>
-          <h1 className='mt-10 text-3xl'>{product.title}</h1>
-          <p className='text-2xl my-8'>{`￦${product.price}`}</p>
+        <div className='mt-4 mx-4 lg:mx-24 text-left flex flex-col'>
+          <h1 className='mt-10 lg:text-3xl'>{product.title}</h1>
+          <p className='lg:text-2xl lg:my-8'>{`￦${product.price}`}</p>
           <div className=''>
             {product.size.map((size, index) => (
               <button
                 key={index}
-                className={`border-2 px-2 mx-1 text-lg font-bold hover:bg-blue-500 hover:text-white ${
+                className={`border-2 text-sm px-2 mx-1 lg:text-lg font-bold hover:bg-blue-500 hover:text-white ${
                   selectedSize === size ? 'bg-blue-500 text-white' : ''
                 }`}
                 onClick={() => handleSizeClick(size)}
@@ -105,17 +105,17 @@ export default function Detail(): JSX.Element {
           </select>
           <div className='flex mb-4'>
             <div className='border-2 px-2 rounded-md '>
-              <button className='text-2xl' onClick={handleDecrease}>
+              <button className='lg:text-2xl' onClick={handleDecrease}>
                 -
               </button>
-              <span className='text-2xl mx-4'>{quantity}</span>
-              <button className='text-2xl' onClick={handleIncrease}>
+              <span className='lg:text-2xl mx-4'>{quantity}</span>
+              <button className='lg:text-2xl' onClick={handleIncrease}>
                 +
               </button>
             </div>
           </div>
-          <h1 className='mb-4 text-2xl'>₩{quantity * product.price}</h1>
-          <div>
+          <h1 className='mb-4 lg:text-2xl'>₩{quantity * product.price}</h1>
+          <div className='flex'>
             <button className=' bg-blue-400 mr-4 rounded-md w-16 h-8 font-buy text-white '>
               BUY
             </button>

@@ -11,7 +11,7 @@ export default function Bags(): JSX.Element {
   return (
     <Layout>
       <div className='flex flex-col justify-center items-center'>
-        <div className='mt-4 w-5/6 justify-center grid grid-cols-4 '>
+        <div className='mt-4 w-5/6 justify-center grid md:grid-cols-2 xl:grid-cols-4 '>
           {bagProducts.map((product, index) => (
             <Link href={`/details/${product.id}`} key={product.id}>
               <div className={`m-4 border-2 border-zinc-300 bg-black`}>
@@ -19,7 +19,7 @@ export default function Bags(): JSX.Element {
                   className={`hover:opacity-20 transition-opacity duration-300 relative`}
                   width={500}
                   height={500}
-                  style={{ height: '350px' }}
+                  style={{ height: '50vh' }}
                   src={`${product.thumbnail}`}
                   alt=''
                 />

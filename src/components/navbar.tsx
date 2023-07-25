@@ -13,12 +13,12 @@ export default function navbar() {
             width={100}
             height={50}
           />
-          <h1 className='text-amber-900 mx-12 text-4xl font-nav my-auto'>
+          <h1 className='text-amber-900 lg:mx-12 text-4xl font-nav my-auto'>
             Duck Shop
           </h1>
         </div>
       </Link>
-      <ul className='flex justify-center text-amber-900 font-extrabold font-nav text-2xl'>
+      <ul className='flex justify-center text-amber-900 font-extrabold font-nav text-xl lg:text-2xl'>
         <li>
           <Link href='/all'>All products</Link>
         </li>
