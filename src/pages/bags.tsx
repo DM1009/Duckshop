@@ -12,7 +12,7 @@ export default function Bags(): JSX.Element {
     <Layout>
       <div className='flex flex-col justify-center items-center'>
         <div className='mt-4 w-5/6 justify-center grid md:grid-cols-2 xl:grid-cols-4 '>
-          {bagProducts.map((product, index) => (
+          {bagProducts.map((product) => (
             <Link href={`/details/${product.id}`} key={product.id}>
               <div className={`m-4 border-2 border-zinc-300 bg-black`}>
                 <Image

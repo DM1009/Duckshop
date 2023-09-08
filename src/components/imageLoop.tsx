@@ -21,7 +21,7 @@ const ImageLoop: React.FC = () => {
     <div className='flex flex-wrap relative justify-center '>
       {images.map((image: string, index: number) => (
         <Image
-          className={` mt-4 absolute transition-opacity duration-500 rounded-xl ${
+          className={`mt-4 absolute transition-opacity duration-500 rounded-xl ${
             index === currentImage ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ height: '70vh' }}
